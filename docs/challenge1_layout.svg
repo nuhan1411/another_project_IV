@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <filter id="cshadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0e1726" rx="10" />
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="50" fill="#1b2e4b" />
+  <text x="25" y="32" font-family="Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="#00d2d3">Challenge 1: Bangladesh Beverage Sales &amp; Performance Analytics</text>
+  <text x="1175" y="32" font-family="Segoe UI, sans-serif" font-size="13" fill="#888ea8" text-anchor="end">Power BI Refined Layout (1920x1080 Aspect)</text>
+
+  <!-- Slicer (Left Rail, Refined!) -->
+  <g transform="translate(25, 65)" filter="url(#cshadow)">
+    <rect width="180" height="590" rx="6" fill="#1b2e4b" stroke="#00d2d3" stroke-width="1.5" />
+    <rect x="0" y="0" width="180" height="36" rx="6" fill="#0e2238" />
+    <text x="12" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#00d2d3">🔍 Filter Hierarchy</text>
+    <g font-family="Segoe UI, sans-serif" font-size="11" fill="#bfc9d4">
+      <text x="15" y="60">▼ Division</text>
+      <text x="25" y="80" fill="#00d2d3">• Dhaka</text>
+      <text x="25" y="100">• Chittagong</text>
+      <text x="25" y="120">• Barishal</text>
+      <text x="15" y="150">▼ District</text>
+      <text x="25" y="170">• Dhaka Sadar</text>
+      <text x="25" y="190">• Gazipur / Comilla</text>
+      <text x="15" y="220">▼ Beverage Brand</text>
+      <text x="25" y="240">• Brand A</text>
+      <text x="25" y="260">• Brand B</text>
+      <text x="25" y="280">• Brand C</text>
+    </g>
+    <rect x="10" y="540" width="160" height="36" rx="4" fill="#00d2d3" opacity="0.15" />
+    <text x="90" y="562" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#00d2d3" text-anchor="middle">✓ Filter Applied</text>
+  </g>
+
+  <!-- KPI Multi-Card Visual -->
+  <g transform="translate(220, 65)" filter="url(#cshadow)">
+    <rect width="320" height="280" rx="6" fill="#1b2e4b" stroke="#3b3f5c" stroke-width="1" />
+    <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Executive KPIs</text>
+    
+    <rect x="15" y="45" width="290" height="48" rx="4" fill="#0e1726" />
+    <text x="25" y="65" font-family="Segoe UI, sans-serif" font-size="10" fill="#888ea8">SUM OF REVENUE</text>
+    <text x="25" y="85" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#2196f3">৳ 12.4M</text>
+
+    <rect x="15" y="103" width="290" height="48" rx="4" fill="#0e1726" />
+    <text x="25" y="123" font-family="Segoe UI, sans-serif" font-size="10" fill="#888ea8">SUM OF PROFIT</text>
+    <text x="25" y="143" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#00d2d3">৳ 4.1M</text>
+
+    <rect x="15" y="161" width="290" height="48" rx="4" fill="#0e1726" />
+    <text x="25" y="181" font-family="Segoe UI, sans-serif" font-size="10" fill="#888ea8">SUM OF UNITS SOLD</text>
+    <text x="25" y="201" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#e2a03f">850K</text>
+
+    <rect x="15" y="219" width="290" height="48" rx="4" fill="#0e1726" />
+    <text x="25" y="239" font-family="Segoe UI, sans-serif" font-size="10" fill="#888ea8">AVERAGE PRICE PER UNIT</text>
+    <text x="25" y="259" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#e7515a">৳ 14.59</text>
+  </g>
+
+  <!-- Donut Chart (Revenue by Brand) -->
+  <g transform="translate(555, 65)" filter="url(#cshadow)">
+    <rect width="360" height="280" rx="6" fill="#1b2e4b" stroke="#3b3f5c" stroke-width="1" />
+    <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Revenue Share by Beverage Brand</text>
+    <circle cx="140" cy="160" r="75" fill="none" stroke="#2196f3" stroke-width="28" stroke-dasharray="210 260" />
+    <circle cx="140" cy="160" r="75" fill="none" stroke="#00d2d3" stroke-width="28" stroke-dasharray="140 330" stroke-dashoffset="-210" />
+    <circle cx="140" cy="160" r="75" fill="none" stroke="#e2a03f" stroke-width="28" stroke-dasharray="120 350" stroke-dashoffset="-350" />
+    <g transform="translate(250, 95)" font-family="Segoe UI, sans-serif" font-size="11" fill="#bfc9d4">
+      <rect x="0" y="5" width="10" height="10" fill="#2196f3" />
+      <text x="18" y="15">Brand X (45%)</text>
+      <rect x="0" y="35" width="10" height="10" fill="#00d2d3" />
+      <text x="18" y="45">Brand Y (30%)</text>
+      <rect x="0" y="65" width="10" height="10" fill="#e2a03f" />
+      <text x="18" y="75">Brand Z (25%)</text>
+    </g>
+  </g>
+
+  <!-- Clustered Bar Chart (Profit & Revenue) -->
+  <g transform="translate(930, 65)" filter="url(#cshadow)">
+    <rect width="245" height="590" rx="6" fill="#1b2e4b" stroke="#3b3f5c" stroke-width="1" />
+    <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Brand Profit vs Revenue</text>
+    <!-- Bar 1 -->
+    <text x="15" y="70" font-family="Segoe UI, sans-serif" font-size="11" fill="#888ea8">Brand 1</text>
+    <rect x="15" y="78" width="180" height="14" rx="2" fill="#2196f3" />
+    <rect x="15" y="96" width="110" height="14" rx="2" fill="#00d2d3" />
+    <!-- Bar 2 -->
+    <text x="15" y="140" font-family="Segoe UI, sans-serif" font-size="11" fill="#888ea8">Brand 2</text>
+    <rect x="15" y="148" width="150" height="14" rx="2" fill="#2196f3" />
+    <rect x="15" y="166" width="90" height="14" rx="2" fill="#00d2d3" />
+    <!-- Bar 3 -->
+    <text x="15" y="210" font-family="Segoe UI, sans-serif" font-size="11" fill="#888ea8">Brand 3</text>
+    <rect x="15" y="218" width="195" height="14" rx="2" fill="#2196f3" />
+    <rect x="15" y="236" width="130" height="14" rx="2" fill="#00d2d3" />
+    <!-- Bar 4 -->
+    <text x="15" y="280" font-family="Segoe UI, sans-serif" font-size="11" fill="#888ea8">Brand 4</text>
+    <rect x="15" y="288" width="130" height="14" rx="2" fill="#2196f3" />
+    <rect x="15" y="306" width="70" height="14" rx="2" fill="#00d2d3" />
+  </g>
+
+  <!-- Monthly Trend Line Chart -->
+  <g transform="translate(220, 360)" filter="url(#cshadow)">
+    <rect width="320" height="295" rx="6" fill="#1b2e4b" stroke="#3b3f5c" stroke-width="1" />
+    <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Monthly Revenue Trend</text>
+    <polyline points="30,220 80,180 130,195 180,140 230,110 280,70" fill="none" stroke="#2196f3" stroke-width="3" />
+    <circle cx="280" cy="70" r="4" fill="#00d2d3" />
+    <text x="250" y="60" font-family="Segoe UI, sans-serif" font-size="10" fill="#00d2d3">Peak</text>
+  </g>
+
+  <!-- Date Hierarchy Line Chart -->
+  <g transform="translate(555, 360)" filter="url(#cshadow)">
+    <rect width="360" height="295" rx="6" fill="#1b2e4b" stroke="#3b3f5c" stroke-width="1" />
+    <text x="15" y="26" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Multi-Level Date Hierarchy Drilldown</text>
+    <polyline points="30,210 90,160 150,190 210,130 270,145 330,85" fill="none" stroke="#00d2d3" stroke-width="3" />
+    <circle cx="330" cy="85" r="4" fill="#2196f3" />
+  </g>
+</svg>

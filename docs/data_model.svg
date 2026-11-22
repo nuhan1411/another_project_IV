@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f4287" />
+      <stop offset="100%" stop-color="#278ea5" />
+    </linearGradient>
+    <linearGradient id="dimHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#212121" />
+      <stop offset="100%" stop-color="#424242" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0d1117" rx="12" />
+  
+  <!-- Title -->
+  <text x="480" y="45" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc" text-anchor="middle">Power BI Semantic Data Model Architecture</text>
+  <text x="480" y="70" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Star Schema Dimension &amp; Fact Relational Structure</text>
+
+  <!-- Calendar (Dimension & Measures) -->
+  <g transform="translate(360, 100)" filter="url(#shadow)">
+    <rect width="240" height="340" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    <path d="M 0 8 Q 0 0 8 0 L 232 0 Q 240 0 240 8 L 240 42 L 0 42 Z" fill="url(#gradHeader)" />
+    <text x="12" y="27" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#ffffff">📅 Calendar (Dimension)</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="14" y="66">🔑 Date (PK)</text>
+      <text x="14" y="90">   Month Name</text>
+      <text x="14" y="114">   Month No</text>
+      <text x="14" y="138">   Year / Quarter / Day</text>
+      <line x1="10" y1="150" x2="230" y2="150" stroke="#30363d" stroke-width="1" />
+      <text x="14" y="172" fill="#58a6ff" font-weight="bold">📐 Core DAX Measures:</text>
+      <text x="14" y="196" fill="#79c0ff">   [Total Revenue]</text>
+      <text x="14" y="218" fill="#79c0ff">   [Total Profit]</text>
+      <text x="14" y="240" fill="#79c0ff">   [Average Price per Unit]</text>
+      <text x="14" y="262" fill="#7ee787">   [Total Employees]</text>
+      <text x="14" y="284" fill="#7ee787">   [Current Employees]</text>
+      <text x="14" y="306" fill="#7ee787">   [Termination Rate]</text>
+      <text x="14" y="328" fill="#7ee787">   [Total Salary Paid]</text>
+    </g>
+  </g>
+
+  <!-- Sales (Fact Table) -->
+  <g transform="translate(60, 120)" filter="url(#shadow)">
+    <rect width="230" height="290" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    <path d="M 0 8 Q 0 0 8 0 L 222 0 Q 230 0 230 8 L 230 42 L 0 42 Z" fill="url(#dimHeader)" />
+    <text x="12" y="27" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#58a6ff">📊 Sales (Fact)</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="14" y="66">🔗 Date (FK)</text>
+      <text x="14" y="92">   Division (e.g. Dhaka)</text>
+      <text x="14" y="118">   District</text>
+      <text x="14" y="144">   Beverage Brand</text>
+      <text x="14" y="170">   Units Sold (Number)</text>
+      <text x="14" y="196">   Unit Price (Currency)</text>
+      <text x="14" y="222">   Revenue (Currency)</text>
+      <text x="14" y="248">   Cost (Currency)</text>
+      <text x="14" y="274">   Profit (Currency)</text>
+    </g>
+  </g>
+
+  <!-- Employee (HR Analytics Fact/Dimension) -->
+  <g transform="translate(670, 110)" filter="url(#shadow)">
+    <rect width="230" height="310" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    <path d="M 0 8 Q 0 0 8 0 L 222 0 Q 230 0 230 8 L 230 42 L 0 42 Z" fill="url(#dimHeader)" />
+    <text x="12" y="27" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#7ee787">👥 Employee (HR)</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="14" y="66">🔗 StartMonth / Date (FK)</text>
+      <text x="14" y="90">   Gender</text>
+      <text x="14" y="114">   Education</text>
+      <text x="14" y="138">   JobSatisfaction</text>
+      <text x="14" y="162">   WorkLifeBalance</text>
+      <text x="14" y="186">   EmploymentType</text>
+      <text x="14" y="210">   StartQuarter</text>
+      <text x="14" y="234">   DepartQuarter</text>
+      <text x="14" y="258">   Working Years Band</text>
+      <text x="14" y="282">   YearsAtCompany Group</text>
+      <text x="14" y="306">   Salary</text>
+    </g>
+  </g>
+
+  <!-- Relationship Connectors -->
+  <!-- Sales to Calendar -->
+  <path d="M 290 190 L 360 190" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="5 3" />
+  <circle cx="295" cy="190" r="4" fill="#58a6ff" />
+  <text x="325" y="180" font-family="sans-serif" font-size="11" fill="#58a6ff" font-weight="bold" text-anchor="middle">1 : *</text>
+
+  <!-- Calendar to Employee -->
+  <path d="M 600 200 L 670 200" stroke="#7ee787" stroke-width="2.5" stroke-dasharray="5 3" />
+  <circle cx="665" cy="200" r="4" fill="#7ee787" />
+  <text x="635" y="190" font-family="sans-serif" font-size="11" fill="#7ee787" font-weight="bold" text-anchor="middle">1 : *</text>
+</svg>
